@@ -1,0 +1,43 @@
+CSEN701 Milestone 2 — Coding and debugging prompts
+
+Pico SDK and USB serial
+- Inspect my attached CSEN701 Milestone 1 installation ZIP and description, then guide me step by step from scratch to install and configure Raspberry Pi Pico C SDK with VS Code on my M3 Mac, create a C test for one TTP223 sensor wired VCC to 3V3(OUT), GND to GND, OUT to GP10, build and flash it, and verify via serial output. Do not use Arduino IDE. Explain each action for a beginner, and distinguish course-specific setup from necessary macOS adaptations.
+- opened vs code , done step 3, continue the work
+- i want to see the outputs myself how to see in vs code
+
+Touch keys and MPU-6050
+- done tested , now to connect the rest of touch sensors
+- test the 4 sensors now
+- test mpu
+- done ,  mpu lights but tests dhow 0s
+
+Servo and DC motor
+- test servo
+- test the servo motor
+- I have the L298N motor driver. Guide me through connecting it to the Pico and testing the DC motor step by step.
+- h bridge lights , dc motor not moving
+- ok so we will use l293d instead
+- how to keep rotating
+
+Relay and electromagnet
+- so this is supposed to be connected to gp20
+- check results , no clicks
+- when i typed g didnt hear a click , did hear when first plugged usb tho
+- pin 11 is connected to in1
+- pin 11 is not connected to gnd , mistake
+- ok u said we can only use the l293d right why are u asking for resistors i want the connection to be only the pico the relay module the l293d and the electrogmant thing
+
+LCD
+- I have the 16-pin LCD. Walk me through connecting it to the Raspberry Pi Pico and testing it in C.
+- lights up display "embedded"
+- we will use another lcd with the same format but diffrence is it has a another back part with grd , vcc, sda, and a screw
+- gp4 and gp5 used
+- move to gp27 gp26
+- give me a table with all lcd connections
+- blocks
+
+Buzzer and LEDs
+- start with buzzer
+- 2 sounds why
+- gp21 test
+- instead of gp14 gp15 we will use gp9 gp8
