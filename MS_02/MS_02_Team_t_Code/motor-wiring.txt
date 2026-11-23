@@ -1,0 +1,4 @@
+Wiring unchanged from l293d_test: GP16 -> chip2, GP17 -> chip7; motor
+between chip3/chip6; chip1/chip16 -> USBVBUS; chip8 -> motor supply.
+All chip ground pins, Pico ground, and motor supply negative share ground.
+Unused chip9 enable grounded. Keep motor supply positive separate from VBUS.

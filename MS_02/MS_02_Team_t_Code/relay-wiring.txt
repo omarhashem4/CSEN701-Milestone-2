@@ -1,0 +1,24 @@
+Disconnect USB, AA battery and 12V before rewiring. Keep 12V disconnected.
+Disconnect DC motor leads from L293D chip pins 3 and 6 for this test.
+Remove AA battery positive from chip pin 8; keep the AA pack disconnected.
+For this USB-powered bench test, chip pins 8 and 16 both connect to VBUS 5V.
+Chip grounds 4,5,12,13 connect to Pico GND and relay GND.
+Remove the old chip9-to-GND wire, then connect chip9 to GP20 (Pico pin26).
+Chip10 and chip15 connect to GND. Chip11 connects to relay IN.
+Chip14 stays unconnected. Relay VCC connects to VBUS (Pico pin40), not 3V3.
+All chip numbers mean L293D DIP16 legs viewed from above with notch at top.
+Never connect battery positive to VBUS. Never connect GP20 directly to relay IN.
+
+Principle: chip10 stays LOW. GP20 HIGH enables chip11 to sink relay IN.
+GP20 LOW disables chip11 to high impedance, allowing the module to release.
+This is an adaptation based on the module responding to a grounded input.
+It is not a manufacturer circuit for this exact HL-51 module; test response.
+
+Flash relay.uf2, open Serial Monitor at 115200 and send g for one test.
+It commands relay energize for 2 seconds, then release.
+Commands: 1=hold energized; 0 or s=release. Monitor disconnection releases.
+Serial confirms commands only. Startup enable can float before initialization;
+keep the 12V load disconnected during this bench test.
+
+The DC motor supply and motor are disconnected for this temporary test.
+Review integrated power and motor wiring before combining devices again.
